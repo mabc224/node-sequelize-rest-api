@@ -1,4 +1,4 @@
-## Node.js APP [https://polar-depths-29461.herokuapp.com](https://polar-depths-29461.herokuapp.com)
+## Node.js APP [https://polar-depths-29461.herokuapp.com](https://radiant-beach-46005.herokuapp.com/api/v1)
 
 ________________________
 
@@ -136,6 +136,9 @@ Routing has functionality for changing route quickly with with quick option to c
 $ docker-compose up --build
 ```
 
+### Testing
+
+Postman collection is added for testing in local system and heroku
 
  ### External References and Resources 
 
