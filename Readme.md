@@ -1,4 +1,4 @@
-## Node.js APP [https://polar-depths-29461.herokuapp.com](https://radiant-beach-46005.herokuapp.com/api/v1)
+## Node.js APP [https://radiant-beach-46005.herokuapp.com/](https://radiant-beach-46005.herokuapp.com/api/v1)
 
 ________________________
 
@@ -85,7 +85,7 @@ GET http://localhost:3000/api/v1/comments?limit=2&offset=1
 
 ### About Project
 
-This project is built using node.js with express.js framework.
+This project is built using node.js with express.js framework, postgres database using sequelize and third party api integration (SWAPI).
 
 It is simple rest api app that use json web token and SWAPI (The Star Wars API). Once register then login and get token.
 and later all requests use jwt token http header(`x-access-token`) for sending authenticated requested 
