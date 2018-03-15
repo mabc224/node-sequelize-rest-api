@@ -1,0 +1,41 @@
+{
+	"name": "test-task",
+	"cwd": "./",
+	"args": [
+
+	],
+	"script": "bin/www",
+	"log_date_format": "YYYY-MM-DD HH:mm Z",
+	"min_uptime": "10s",
+	"max_restarts": 15,
+	"watch": [
+
+	],
+	"ignore_watch": [
+		"node_modules"
+	],
+	"merge_logs": true,
+	"exec_interpreter": "node",
+	"exec_mode": "cluster",
+	"instances": 0,
+	"autorestart": true,
+	"vizion": false,
+	"env": {
+		"NODE_ENV": "development",
+		"PGUSER":"postgres",
+		"PGDATABASE":"sample",
+		"PGPASSWORD":"",
+		"PGHOST":"localhost",
+		"PGPORT":5432,
+		"DATABASE_URL":""
+	},
+	"env_production": {
+		"NODE_ENV": "production",
+		"PGUSER":"",
+		"PGDATABASE":"",
+		"PGPASSWORD":"",
+		"PGHOST":"",
+		"PGPORT":"",
+		"DATABASE_URL":""
+	  }
+}

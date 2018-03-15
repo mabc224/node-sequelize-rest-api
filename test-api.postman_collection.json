@@ -1,0 +1,293 @@
+{
+	"variables": [],
+	"info": {
+		"name": "test-api",
+		"_postman_id": "382c1479-c526-dee4-51ac-d841d2f948f3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/v1/register",
+			"request": {
+				"url": "http://localhost:3000/api/v1/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"username\": \"Tatooine\",\n \"secret\": \"2222\"\n}"
+				},
+				"description": "Endpoint is used to create new user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/login",
+			"request": {
+				"url": "http://localhost:3000/api/v1/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"username\": \"Tatooine\",\n \"secret\": \"2222\"\n}"
+				},
+				"description": "Endpoint is used to login user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/planets",
+			"request": {
+				"url": "http://localhost:3000/api/v1/planets",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRhdG9vaW5lIiwiaWF0IjoxNTIxMDYzMjQyLCJleHAiOjE1MjExNDk2NDJ9.zlaaDARzJrzTgEcAMHhzgAkCuQpb7QhgjEI-eLAlHXY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"Alderaan\"\n}"
+				},
+				"description": "Endpoint is used to create a planet"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/planets/1",
+			"request": {
+				"url": "http://localhost:3000/api/v1/planets/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRhdG9vaW5lIiwiaWF0IjoxNTIxMDYzMjQyLCJleHAiOjE1MjExNDk2NDJ9.zlaaDARzJrzTgEcAMHhzgAkCuQpb7QhgjEI-eLAlHXY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"Tatooine\"\n}"
+				},
+				"description": "Endpoint is used to get a single planet"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/planets",
+			"request": {
+				"url": "http://localhost:3000/api/v1/planets/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRhdG9vaW5lIiwiaWF0IjoxNTIxMDYzMjQyLCJleHAiOjE1MjExNDk2NDJ9.zlaaDARzJrzTgEcAMHhzgAkCuQpb7QhgjEI-eLAlHXY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"Tatooine\"\n}"
+				},
+				"description": "Endpoint is used to get all planet"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/planets/1",
+			"request": {
+				"url": "http://localhost:3000/api/v1/planets/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRhdG9vaW5lIiwiaWF0IjoxNTIxMDYzMjQyLCJleHAiOjE1MjExNDk2NDJ9.zlaaDARzJrzTgEcAMHhzgAkCuQpb7QhgjEI-eLAlHXY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"name\": \"Tatooine\"\n}"
+				},
+				"description": "Endpoint is used to delete a planet by id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/planets/1",
+			"request": {
+				"url": "http://localhost:3000/api/v1/planets/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRhdG9vaW5lIiwiaWF0IjoxNTIxMDYzMjQyLCJleHAiOjE1MjExNDk2NDJ9.zlaaDARzJrzTgEcAMHhzgAkCuQpb7QhgjEI-eLAlHXY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"rotation_period\": \"233\",\r\n        \"orbital_period\": \"3044\",\r\n        \"diameter\": \"104655\",\r\n        \"climate\": \"aridd\",\r\n        \"gravity\": \"1 standardd\",\r\n        \"terrain\": \"desertt\",\r\n        \"surface_water\": \"11\",\r\n        \"population\": \"2000002\",\r\n        \"residents\": [\r\n            \"https://swapi.co/api/people/1/\"\r\n        ],\r\n        \"films\": [\r\n            \"https://swapi.co/api/films/1/\"\r\n        ],\r\n        \"url\": \"https://swapi.co/api/planets/1/\",\r\n        \"updatedAt\": \"2018-03-14T21:50:33.008Z\",\r\n        \"createdAt\": \"2018-03-14T21:50:33.008Z\"\r\n    }"
+				},
+				"description": "Endpoint is used to update a planet by id"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/comments",
+			"request": {
+				"url": "http://localhost:3000/api/v1/comments",
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRhdG9vaW5lIiwiaWF0IjoxNTIxMDYzMjQyLCJleHAiOjE1MjExNDk2NDJ9.zlaaDARzJrzTgEcAMHhzgAkCuQpb7QhgjEI-eLAlHXY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"id\": \"1\",\n \"comment\": \"This is my comment added in 1\"\n}"
+				},
+				"description": "Endpoint to add comment in a planet"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/comments?planet=1",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/api/v1/comments?planet=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"comments"
+					],
+					"query": [
+						{
+							"key": "planet",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRhdG9vaW5lIiwiaWF0IjoxNTIxMDYzMjQyLCJleHAiOjE1MjExNDk2NDJ9.zlaaDARzJrzTgEcAMHhzgAkCuQpb7QhgjEI-eLAlHXY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"id\": \"2\",\n \"comment\": \"This is my comment added in 2\"\n}"
+				},
+				"description": "Endpoint to retrieve comment in a planet"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/v1/comments",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/api/v1/comments?planet=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"comments"
+					],
+					"query": [
+						{
+							"key": "planet",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRhdG9vaW5lIiwiaWF0IjoxNTIxMDYzMjQyLCJleHAiOjE1MjExNDk2NDJ9.zlaaDARzJrzTgEcAMHhzgAkCuQpb7QhgjEI-eLAlHXY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"id\": \"2\",\n \"comment\": \"This is my comment added in 2\"\n}"
+				},
+				"description": "Endpoint to retrieve specific comment in a planet by query parameter"
+			},
+			"response": []
+		}
+	]
+}

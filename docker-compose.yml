@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  nodeapp:
+    image: nodeapp
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      PORT: 3000
+      NODE_ENV: production
+      DATABASE_URL: postgres://postgres:postgres@database/sample
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    command: npm start
+    links:
+      - database
+    depends_on:
+      - database
+  database:
+    image: postgres:10.3-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: sample
