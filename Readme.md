@@ -88,7 +88,49 @@ GET http://localhost:3000/api/v1/comments?limit=2&offset=1
 This project is built using node.js with express.js framework, postgres database using sequelize and third party api integration (SWAPI).
 
 It is simple rest api app that use json web token and SWAPI (The Star Wars API). Once register then login and get token.
-and later all requests use jwt token http header(`x-access-token`) for sending authenticated requested 
+and later all requests use jwt token http header(`x-access-token`) for sending authenticated requested.
+
+```
+SPECIFICATION
+REST API with postgres database and usage of external JSON API with simple json web token authentication. Full specification of routes below:
+
+POST /register:
+Request body should containing planet's username and secret in request body.
+Response will return HTTP 201 with empty body.
+
+POST /login:
+Request body should containing planet's username and secret in request body.
+Response will return HTTP 200 with the fetched token as response's body.
+
+Now below Only authorized request should be allowed, not-authorized requests should receive proper HTTP error.
+
+POST /planets:
+Request body should containing planet's name,
+Request data will be validated and accept only name as a string,
+Additional data will be fetched from https://swapi.co/, aginst provided planet name and saved to database,
+response will return HTTP 201 with the fetched data as response's body.
+
+GET /planets:
+List all planets from database,
+Pagination, filtering and sorting on id basis is added!
+
+GET /planets/:id
+It will return a planet by id from database,
+
+POST /comments:
+Request will contains comment's text and planet's ID,
+it will add a comment to a given planet and return that comment as response body.
+
+GET /comments:
+it will fetch list of all comments from database and allow for filtering, pagination by planet using /comments?planet=:planet_id&limit=1&offset=1 query parameter.
+
+DELETE /planets/:id
+It will remove a given planet from database.
+
+PUT /planets/:id
+It will update a given planet by id in database.
+
+```
 
 #### Backend
 
